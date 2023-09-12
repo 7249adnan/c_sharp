@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace @interface
+{
+
+    interface Iabc1
+    {
+        int Length { get; set; }
+        int Breadth { get; set; }
+        
+    }
+    interface Iabc2
+    {
+        void prt();
+        void prt(int i);
+    }
+
+    interface Iabc3:Iabc1,Iabc2
+    {
+        void prt(int i, int j);
+    }
+
+    class abc : Iabc1,Iabc2,Iabc3
+    {
+        int l, b;
+
+        public int  Length
+        {
+            get
+            {
+                return l;
+            }
+            set
+            {
+                l = value;
+            }
+        }
+        public int Breadth
+        {
+            get
+            {
+                return b;
+            }
+            set
+            {
+                b = value;
+            }
+        }
+
+
+        public void prt()
+        {
+
+        }
+        public void prt(int i)
+        {
+
+        }
+        public void prt(int i,int j)
+        {
+
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
